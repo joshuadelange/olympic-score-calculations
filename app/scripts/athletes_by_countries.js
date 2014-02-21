@@ -165,7 +165,7 @@ var athletesByCountries = [
 		'athletes': 52
 	},
 	{
-		'name': 'South Korea',
+		'name': 'Korea',
 		'athletes': 71
 	},
 	{
