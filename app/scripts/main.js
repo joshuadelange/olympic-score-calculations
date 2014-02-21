@@ -27,8 +27,6 @@ $(document).ready(function(){
 
 	$.getJSON('http://www.kimonolabs.com/api/751j6x7w?apikey=ade40a23fb70523f951a0d582180bf3f&callback=?', function(response){
 
-		console.log(response.results.collection1) ;
-
 		$.each(response.results.collection1, function(index, country){
 			
 			$.each(athletesByCountries, function(index, athletesByCountry){
@@ -50,8 +48,6 @@ $(document).ready(function(){
 				}
 
 			}) ;
-
-			console.log(countries) ;
 
 		}) ;
 
