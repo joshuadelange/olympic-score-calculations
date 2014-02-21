@@ -1,0 +1,124 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>olympic score calculations</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body>
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+
+            <div class="jumbotron">
+
+                <p class="lead">Olympic ranking based on medals won per amount of athletes represented for each country.</p>
+
+            </div>
+
+            <div class="row">
+
+                <table class="table">
+
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Original rank</th>
+                            <th>Country</th>
+                            <th>Medals to athlete Ratio</th>
+                            <th>Athletes</th>
+                            <th>Total medals</th>
+                            <th>Gold</th>
+                            <th>Silver</th>
+                            <th>Bronze</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+
+                        <script id="countries" type="text/x-handlebars-template">
+                            {{#each this}}
+                                <tr>
+                                    <td>{{math @index "+" 1}}</td>
+                                    <td>{{rank}}</td>
+                                    <td><a target="_blank" href="{{link}}">{{name}}</a></td>
+                                    <td>{{medalsAthletesRatio}}</td>
+                                    <td>{{athletes}}</td>
+                                    <td>{{total}}</td>
+                                    <td>{{gold}}</td>
+                                    <td>{{silver}}</td>
+                                    <td>{{bronze}}</td>
+                                </tr>
+                            {{/each}}
+                        </script>
+
+                    </tbody>
+                </table>
+
+                <img class="loader" src="http://loadinggif.com/generated-image?imageId=3&bgColor=%23ffffff&fgColor=%23000000&transparentBg=1&download=0&random=0.5450633438304067" alt="Loading">
+
+            </div>
+
+            <div class="footer">
+                <p>Crafted by Joshua de Lange <a href="http://joshuadelange.com">♥</a></p>
+                <p>Using <a href="http://www.kimonolabs.com/sochi">Kimono Labs</a></p>
+                <p>Source: <a href="http://www.sochi2014.com/en/medal-standings">sochi2014.com</a> &amp; <a href="http://en.wikipedia.org/wiki/2014_Winter_Olympics#Participating_National_Olympic_Committees">wikipedia</a>!</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/handlebars/handlebars.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/athletes_by_countries.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/sass-bootstrap/js/affix.js"></script>
+        <script src="bower_components/sass-bootstrap/js/alert.js"></script>
+        <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/sass-bootstrap/js/modal.js"></script>
+        <script src="bower_components/sass-bootstrap/js/transition.js"></script>
+        <script src="bower_components/sass-bootstrap/js/button.js"></script>
+        <script src="bower_components/sass-bootstrap/js/popover.js"></script>
+        <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
+        <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
+        <script src="bower_components/sass-bootstrap/js/tab.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
